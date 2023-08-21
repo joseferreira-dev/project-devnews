@@ -5,6 +5,7 @@ import db from './src/database/db.js';
 
 import userRoute from './src/routes/userRoute.js';
 import authRoute from './src/routes/authRoute.js';
+import newsRoute from './src/routes/newsRoute.js';
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ app.use(express.json());
 
 app.use('/user', userRoute);
 app.use('/auth', authRoute);
+app.use('/news', newsRoute);
 
 app.listen(port, () => {
   console.log(`App listening os port ${port}`);
